@@ -83,6 +83,7 @@ module test;
     `ifdef FSDB
       $fsdbDumpfile("NFC.fsdb");
       $fsdbDumpvars;
+	  //$fsdbDumpMDA;
     `endif
 
     `ifdef SDF
@@ -120,7 +121,7 @@ begin
 			x=k/512;
 			if( y == 0)
 				begin
-					$display("page %d data have been generated successfully!", x);
+	//				$display("page %d data have been generated successfully!", x);
 					err=err; 
 				end
 			else

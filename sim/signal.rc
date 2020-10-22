@@ -1,0 +1,109 @@
+Magic 271485
+Revision Verdi_Q-2020.03
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 1536 23 1344 777 171 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/lin/github/CIC_2012_grad/sim/NFC.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 2577.311175
+cursor 1500.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 25
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+aliasmapname signal.alias
+nalias ADDRESS_A_1		4'd4		NULL
+nalias IDLE_A		4'd1		NULL
+nalias ADDRESS_A_2		4'd5		NULL
+nalias DONE_A		4'd8		NULL
+nalias CMD_A		4'd2		NULL
+nalias WAIT_A		4'd6		NULL
+nalias ADDRESS_A_0		4'd3		NULL
+nalias REVC_A		4'd7		NULL
+
+addGroup "G1"
+activeDirFile "" "/home/lin/github/CIC_2012_grad/sim/NFC.fsdb"
+addSignal -h 15 /test/clk
+addSignal -h 15 -holdScope rst
+addSignal -h 15 -holdScope done
+addSignal -h 15 /test/top/F_CLE_A
+addSignal -h 15 -holdScope F_WEN_A
+addSignal -h 15 -holdScope F_ALE_A
+addSignal -h 15 -holdScope F_REN_A
+addSignal -h 15 -holdScope F_RB_A
+addSignal -h 15 -holdScope OUT_EN_A
+addSignal -h 15 -holdScope F_IO_A[7:0]
+addSignal -h 15 -holdScope F_IN_A[7:0]
+addSignal -h 15 -holdScope F_OUT_A[7:0]
+aliasname signal.alias
+addSignal -h 15 -MAGN -HEX -holdScope cs_A[3:0]
+aliasname signal.alias
+addSignal -h 15 -MAGN -HEX -holdScope ns_A[3:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope counter_MEM_A[17:0]
+addSignal -h 15 -holdScope F_CLE_B
+addSignal -h 15 -holdScope F_WEN_B
+addSignal -h 15 -holdScope F_ALE_B
+addSignal -h 15 -holdScope OUT_EN_B
+addSignal -h 15 -UNSIGNED -HEX -holdScope F_IN_B[7:0]
+addSignal -h 15 -holdScope F_IO_B[7:0]
+addSignal -h 15 -holdScope F_OUT_B[7:0]
+addSignal -h 15 -holdScope F_RB_B
+addSignal -h 15 -holdScope F_REN_B
+addSignal -h 15 -holdScope flag
+addSignal -h 15 -holdScope done
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/lin/github/CIC_2012_grad/sim/NFC.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/test"
+"/test/top"
+
+SCOPE_LIST_BEGIN
+"/test"
+"/test/top"
+"/test/fb"
+"/test/fa"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

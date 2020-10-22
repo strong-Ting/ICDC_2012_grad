@@ -90,7 +90,7 @@ end
 
 always@(posedge clk or posedge rst)
 begin
-	if(rst) flag <= 1'd0;
+	if(rst) flag <= 1'd1;
 	else if(cs_A == REVC_A && flag == 1'd1) flag <= 1'd0; 
 	else if(cs_A == WAIT_B) flag <= 1'd1;
 end
@@ -100,7 +100,7 @@ wire F_CLE_A = (cs_A == CMD_A) ? 1'd1 : 1'd0;
 wire F_CLE_B = (cs_A == CMD_A || cs_A == WRITE_B ) ? 1'd1 : 1'd0;
 
 //F_REN
-wire F_REN_A = (cs_A == REVC_A) ? (clk) : 1'd1;	
+wire F_REN_A = (cs_A == REVC_A) ? clk : 1'd1;	
 wire F_REN_B = 1'd1;
 
 //F_WEN
@@ -109,7 +109,7 @@ reg F_WEN_B;
 always@(*)
 begin
 	if( F_CLE_B == 1'd1 || cs_A == ADDRESS_A_0 || cs_A == ADDRESS_A_1 || cs_A == ADDRESS_A_2) F_WEN_B = (~clk);
-	else if(counter_MEM_A != 18'd0 && counter_MEM_A[8:0] != 9'd511 ) F_WEN_B = F_REN_A;
+	else if(counter_MEM_A[8:0] != 9'd511 ) F_WEN_B = clk;
 	else F_WEN_B = 1'd0;	
 end
 
@@ -147,7 +147,7 @@ end
 //counter_MEM_A
 always@(posedge clk or posedge rst)
 begin
-	if(rst) counter_MEM_A <= 18'd0;
+	if(rst) counter_MEM_A <= 18'd262143;
 	else if(cs_A == REVC_A && ns_A == REVC_A) counter_MEM_A <= counter_MEM_A + 18'd1;
 end
 

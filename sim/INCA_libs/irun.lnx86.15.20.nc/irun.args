@@ -1,0 +1,8 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+testfixture.v
+../src/NFC.v
++define+p2+FSDB
++access+r

@@ -1,0 +1,65 @@
+irun: 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun	15.20-s039: Started on Oct 22, 2020 at 19:27:11 CST
+irun
+	testfixture.v
+	../src/NFC.v
+	+define+p2+FSDB
+	+access+r
+file: testfixture.v
+	module worklib.flash_a:v
+		errors: 0, warnings: 0
+	module worklib.BUFFER:v
+		errors: 0, warnings: 0
+	module worklib.flash_b:v
+		errors: 0, warnings: 0
+	module worklib.test:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		test
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.flash_a:v <0x63678723>
+			streams: 119, words: 76074
+		worklib.flash_b:v <0x4bdfe0ff>
+			streams: 118, words: 75688
+		worklib.test:v <0x441e5c92>
+			streams:   4, words:  5404
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                  14       5
+		Primitives:               54       2
+		Timing outputs:           18      18
+		Registers:               218     218
+		Scalar wires:             89       -
+		Expanded wires:           16       2
+		Vectored wires:            9       -
+		Named events:              4       4
+		Always blocks:           104     104
+		Initial blocks:           75      75
+		Cont. assignments:        10      32
+		Pseudo assignments:        2       2
+		Timing checks:           100      31
+		Simulation timescale:  100ps
+	Writing initial simulation snapshot: worklib.test:v
+Loading snapshot worklib.test:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_Q-2020.03, Linux, 02/09/2020
+(C) 1996 - 2020 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'NFC.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+All data have been generated successfully!
+
+-------------------PASS-------------------
+
+Simulation complete via $finish(1) at time 5427230 NS + 3
+./testfixture.v:134 		    $finish;
+ncsim> exit
+TOOL:	irun	15.20-s039: Exiting on Oct 22, 2020 at 19:27:23 CST  (total: 00:00:12)
