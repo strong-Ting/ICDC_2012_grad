@@ -1,0 +1,16 @@
+irun: 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun	15.20-s039: Started on Oct 19, 2020 at 17:35:57 CST
+irun
+	NFC.v
+Recompiling... reason: file './NFC.v' is newer than expected.
+	expected: Mon Oct 19 16:12:49 2020
+	actual:   Mon Oct 19 17:35:55 2020
+file: NFC.v
+end
+  |
+ncvlog: *E,NOTSTT (NFC.v,89|2): expecting a statement [9(IEEE)].
+	module worklib.NFC:v
+		errors: 1, warnings: 0
+ncvlog: *F,NOTOPL: no top-level unit found, must have recursive instances.
+irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 2).
+TOOL:	irun	15.20-s039: Exiting on Oct 19, 2020 at 17:35:57 CST  (total: 00:00:00)
