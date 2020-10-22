@@ -1,6 +1,6 @@
 //
-// File created by:  irun
+// File created by:  ncverilog
 // Do not modify this file
 //
 /home/lin/github/CIC_2012_grad/sim/testfixture.v
-/home/lin/github/CIC_2012_grad/src/NFC.v
+/home/lin/github/CIC_2012_grad/syn/NFC_syn.v
