@@ -6,16 +6,14 @@ Report : timing
         -max_paths 1
 Design : NFC
 Version: Q-2019.12
-Date   : Thu Oct 22 19:32:29 2020
+Date   : Fri Oct 23 21:13:10 2020
 ****************************************
 
 Operating Conditions: slow   Library: slow
 Wire Load Model Mode: top
 
-  Startpoint: counter_MEM_A_reg[1]
-              (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: F_OUT_A_reg[0]
-            (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: clk (clock source 'clk')
+  Endpoint: F_WEN_B (output port clocked by clk)
   Path Group: clk
   Path Type: max
 
@@ -25,52 +23,22 @@ Wire Load Model Mode: top
 
   Point                                    Incr       Path
   -----------------------------------------------------------
-  clock clk (rise edge)                    0.00       0.00
-  clock network delay (ideal)              1.00       1.00
-  counter_MEM_A_reg[1]/CK (DFFSX1)         0.00       1.00 r
-  counter_MEM_A_reg[1]/Q (DFFSX1)          0.83       1.83 r
-  U155/Y (NAND2XL)                         0.57       2.40 f
-  U198/Y (NOR2X1)                          0.73       3.13 r
-  U153/Y (NAND2XL)                         0.58       3.72 f
-  U199/Y (NOR2X1)                          0.74       4.46 r
-  U193/Y (NAND2XL)                         0.59       5.05 f
-  U200/Y (NOR2X1)                          0.74       5.79 r
-  U192/Y (NAND2XL)                         0.46       6.25 f
-  U146/Y (INVX1)                           0.38       6.63 r
-  U201/Y (NAND2X1)                         0.44       7.07 f
-  U145/Y (INVX1)                           0.49       7.56 r
-  U144/Y (NAND2X1)                         0.35       7.92 f
-  U206/Y (NOR2X1)                          0.68       8.60 r
-  U143/Y (NAND2X1)                         0.44       9.04 f
-  U207/Y (NOR2X1)                          0.69       9.73 r
-  U142/Y (NAND2X1)                         0.44      10.17 f
-  U208/Y (NOR2X1)                          0.69      10.86 r
-  U141/Y (NAND2X1)                         0.44      11.30 f
-  U209/Y (NOR2X1)                          0.55      11.85 r
-  U157/Y (NAND2XL)                         0.54      12.39 f
-  U210/Y (NOR2BX1)                         0.31      12.70 r
-  U215/Y (OAI222XL)                        0.48      13.18 f
-  U140/Y (INVX1)                           0.61      13.79 r
-  U257/Y (NOR2X1)                          0.52      14.32 f
-  U154/Y (INVXL)                           0.71      15.03 r
-  U278/Y (AOI2BB2X1)                       0.29      15.32 r
-  U279/Y (OAI31XL)                         0.25      15.58 f
-  U280/Y (OAI31XL)                         0.33      15.91 r
-  U167/Y (OAI2BB1XL)                       0.25      16.16 f
-  F_OUT_A_reg[0]/D (DFFRX1)                0.00      16.16 f
-  data arrival time                                  16.16
+  clock clk (fall edge)                   10.00      10.00
+  clk (in)                                 0.43      10.43 f
+  U96/Y (AOI2BB1X4)                        2.69      13.12 r
+  F_WEN_B (out)                            0.00      13.12 r
+  data arrival time                                  13.12
 
   clock clk (rise edge)                   20.00      20.00
   clock network delay (ideal)              1.00      21.00
   clock uncertainty                       -1.00      20.00
-  F_OUT_A_reg[0]/CK (DFFRX1)               0.00      20.00 r
-  library setup time                      -0.25      19.75
-  data required time                                 19.75
+  output external delay                   -2.00      18.00
+  data required time                                 18.00
   -----------------------------------------------------------
-  data required time                                 19.75
-  data arrival time                                 -16.16
+  data required time                                 18.00
+  data arrival time                                 -13.12
   -----------------------------------------------------------
-  slack (MET)                                         3.59
+  slack (MET)                                         4.88
 
 
 1

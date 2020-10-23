@@ -1,18 +1,15 @@
 irun: 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
-TOOL:	irun	15.20-s039: Started on Oct 22, 2020 at 19:27:11 CST
+TOOL:	irun	15.20-s039: Started on Oct 22, 2020 at 19:55:58 CST
 irun
 	testfixture.v
 	../src/NFC.v
 	+define+p2+FSDB
 	+access+r
-file: testfixture.v
-	module worklib.flash_a:v
-		errors: 0, warnings: 0
-	module worklib.BUFFER:v
-		errors: 0, warnings: 0
-	module worklib.flash_b:v
-		errors: 0, warnings: 0
-	module worklib.test:v
+Recompiling... reason: file '../src/NFC.v' is newer than expected.
+	expected: Thu Oct 22 19:55:22 2020
+	actual:   Thu Oct 22 19:55:55 2020
+file: ../src/NFC.v
+	module worklib.NFC:v
 		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
@@ -20,12 +17,8 @@ file: testfixture.v
 		test
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.flash_a:v <0x63678723>
-			streams: 119, words: 76074
-		worklib.flash_b:v <0x4bdfe0ff>
-			streams: 118, words: 75688
-		worklib.test:v <0x441e5c92>
-			streams:   4, words:  5404
+		worklib.NFC:v <0x0425d9ee>
+			streams:  20, words:  8327
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -62,4 +55,4 @@ All data have been generated successfully!
 Simulation complete via $finish(1) at time 5427230 NS + 3
 ./testfixture.v:134 		    $finish;
 ncsim> exit
-TOOL:	irun	15.20-s039: Exiting on Oct 22, 2020 at 19:27:23 CST  (total: 00:00:12)
+TOOL:	irun	15.20-s039: Exiting on Oct 22, 2020 at 19:56:11 CST  (total: 00:00:13)

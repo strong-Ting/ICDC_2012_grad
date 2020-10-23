@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version Q-2019.12 for linux64 -- Nov 26, 2019
-#@ # Date:   Thu Oct 22 19:29:38 2020
+#@ # Date:   Fri Oct 23 21:13:00 2020
 #@ # Run by: lin@DESKTOP-OFJ877F
 #@ 
 
@@ -6706,7 +6706,7 @@ source -echo -verbose /home/lin/github/CIC_2012_grad/syn/DC_syn.tcl
 #@ # -- Starting source /home/lin/github/CIC_2012_grad/syn/DC_syn.tcl
 
 #@ 
-#@ set_host_options -max_cores 4
+#@ #set_host_options -max_cores 4
 #@ #Read All Files
 #@ #read_verilog ../src/NFC.v
 #@ analyze -format verilog ../src/NFC.v
@@ -6753,10 +6753,12 @@ source -echo -verbose /home/lin/github/CIC_2012_grad/syn/DC_syn.tcl
 
 #@ 
 #@ #Synthesis all design
-#@ #compile -map_effort medium -area_effort medium
-#@ #compile -map_effort medium -area_effort medium -inc
-#@ compile_ultra -retime
-#@ compile_ultra -inc
+#@ compile -map_effort high
+#@ compile -map_effort high -inc
+#@ #compile -map_effort high -area_effort high
+#@ #compile -map_effort high -area_effort high -inc
+#@ #compile_ultra 
+#@ #compile_ultra -inc
 #@ 
 #@ write -format ddc     -hierarchy -output "NFC_syn.ddc"
 #@ write_sdf NFC_syn.sdf

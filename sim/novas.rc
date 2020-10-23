@@ -202,18 +202,18 @@ StickSet-TextColor = black
 [FSM_Dlg-Print]
 Orientation = Landscape
 [FileBrowser]
-nWaveOpenFsdbDirHistory = "\"/home/lin/github/CIC_2012_grad/sim/NFC.fsdb\""
 nWaveRestoreRCDirHistory = "\"/home/lin/github/CIC_2012_grad/sim/signal.rc\""
+nWaveOpenFsdbDirHistory = "\"/home/lin/github/CIC_2012_grad/sim/NFC.fsdb\"" "\"/home/lin/github/ICContest-2012-Preliminary-NANDFlashMemoryController-master/sim/NFC.fsdb\""
 [Form]
 version = Verdi_Q-2020.03
 [General]
 autoSaveSession = FALSE
 TclAutoSource = 
 SyncBrowserDir = TRUE
+version = Verdi_Q-2020.03
 SignalCaseInSensitive = FALSE
 cmd_enter_form = FALSE
 ShowWndCtntDuringResizing = FALSE
-version = Verdi_Q-2020.03
 [GlobalProp]
 ErrWindow_Font = Helvetica_M_R_12
 [Globals]
@@ -329,12 +329,12 @@ PaperSize = A4 - 210x297 (mm)
 ColorPrint = FALSE
 [QtDialog]
 QwWarnMsgDlg = 458,247,600,250
-openFileDlg = 665,561,602,483
 nWave_OpenAliasFile = 655,321,590,340
 restoreSigDlg = 684,312,551,438
 saveSigDlg = 396,181,551,386
-qWaveSignalDialog = 560,292,800,479
 QwUserAskDlg = 164,187,324,134
+openFileDlg = 481,202,602,483
+qWaveSignalDialog = 368,184,800,479
 [Session Cache]
 1 = string (session file name)
 2 = string (session file name)
@@ -548,7 +548,8 @@ waveform_vertical_scroll_bar = TRUE
 scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
-viewPort = 0 23 1920 1017 171 65
+getSignalForm = 1739 228 800 479 245 381 505 183
+viewPort = 486 531 960 332 100 65
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98
@@ -821,8 +822,8 @@ curveWindow_Drag&Drop_Mode = TRUE
 hspiceIncOpenMode = TRUE
 pcSelectMode = TRUE
 hierarchyDelimiter = /
-RecentFile1 = "\"/home/lin/github/CIC_2012_grad/sim/signal.rc\""
-RecentFile2 = "\"/home/lin/github/CIC_2012_grad/sim/NFC.fsdb\""
+RecentFile1 = "\"/home/lin/github/CIC_2012_grad/sim/NFC.fsdb\""
+RecentFile2 = "\"/home/lin/github/CIC_2012_grad/sim/signal.rc\""
 open_file_time_range = FALSE
 value_window_aligment = Right
 signal_window_alignment = Auto
@@ -834,18 +835,18 @@ group_name_font = -f COURIER12 -c ID_GREEN5
 ruler_value_font = -f COURIER12 -c ID_CYAN5
 analog_ruler_value_font = -f COURIER12 -c ID_CYAN5
 comment_string_font = -f COURIER12 -c ID_RED5
-getsignal_form_font = -f COURIER12
+getsignal_form_font = -f COURIER12 
 SigsCheckNum = on 1000
 filter_synthesized_net = off n
 filterOutNet = on
 exclude_signal_with_prefix = off n
 synthesizeNetOnly = on
-filter_synthesized_instance = off
+filter_synthesized_instance = off 
 filterOutInstance = on
 showGroupTree = TRUE
 hierGroupDelim = /
 MsgSeverityColor = {y \"Severity\"==\"1\" ID_RED5} {y \"Severity\"==\"2\" ID_RED6} {y \"Severity\"==\"3\" ID_RED7} {y \"Severity\"==\"4\" ID_RED8} {y \"Severity\"==\"5\" ID_ORANGE5} {y \"Severity\"==\"6\" ID_ORANGE6} {y \"Severity\"==\"7\" ID_ORANGE7} {y \"Severity\"==\"8\" \
-ID_GREEN7} {y \"Severity\"==\"9\" ID_GREEN6} {y \"Severity\"==\"10\" ID_GREEN5}
+ID_GREEN7} {y \"Severity\"==\"9\" ID_GREEN6} {y \"Severity\"==\"10\" ID_GREEN5} 
 AutoApplySeverityColor = TRUE
 AutoAdjustMsgWidthByLabel = off
 verilogStrengthDispType = type1
@@ -862,7 +863,7 @@ displayHorizontalRuler = FALSE
 displayVerticalGrid = FALSE
 displayHorizontalGrid = FALSE
 waveClickMemberNode = FALSE
-getSignalForm = 560 292 800 479 245 381 505 183
+RecentFile3 = "\"/home/lin/github/CIC_2012_grad/sim/signal.rc\""
 [cov_hier_name_column]
 justify = TRUE
 [coverageColors]

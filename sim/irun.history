@@ -119,3 +119,17 @@ s118(22Oct2020:19:25:32):  irun testfixture.v ../src/NFC.v +define+p2+FSDB +acce
 s119(22Oct2020:19:26:14):  irun testfixture.v ../src/NFC.v +define+p1+FSDB +access+r 
 s120(22Oct2020:19:26:55):  irun testfixture.v ../src/NFC.v +define+p1+FSDB +access+r 
 s121(22Oct2020:19:27:11):  irun testfixture.v ../src/NFC.v +define+p2+FSDB +access+r 
+s122(22Oct2020:19:33:13):  ncverilog testfixture.v ../syn/NFC_syn.v -v ../../tsmc13_neg.v +define+p1 
+s123(22Oct2020:19:33:55):  ncverilog testfixture.v ../syn/NFC_syn.v -v ../../tsmc13_neg.v +define+p1 +define+SDF 
+s124(22Oct2020:19:34:15):  ncverilog testfixture.v ../syn/NFC_syn.v -v ../../tsmc13_neg.v +define+p2 +define+SDF 
+s125(22Oct2020:19:35:44):  ncverilog testfixture.v ../syn/NFC_syn.v -v ../../tsmc13_neg.v +define+p2+FSDB +define+SDF 
+s126(22Oct2020:19:35:49):  ncverilog testfixture.v ../syn/NFC_syn.v -v ../../tsmc13_neg.v +define+p2+FSDB +define+SDF +access+r 
+s127(22Oct2020:19:39:16):  ncverilog testfixture.v ../syn/NFC_syn.v -v ../../tsmc13_neg.v +define+p2+FSDB +define+SDF +access+r 
+s128(22Oct2020:19:40:18):  ncverilog testfixture.v ../syn/NFC_syn.v -v ../../tsmc13_neg.v +define+p2+FSDB +define+SDF +access+r 
+s129(22Oct2020:19:40:33):  ncverilog testfixture.v ../syn/NFC_syn.v -v ../../tsmc13_neg.v +define+p2+FSDB+SDF +access+r 
+s130(22Oct2020:19:40:47):  ncverilog testfixture.v ../syn/NFC_syn.v -v ../../tsmc13_neg.v +define+p2+FSDB +access+r 
+s131(22Oct2020:19:41:10):  ncverilog testfixture.v ../syn/NFC_syn.v -v ../../tsmc13_neg.v +define+p2+FSDB+SDF +access+r 
+s132(22Oct2020:19:41:42):  ncverilog testfixture.v ../syn/NFC_syn.v -v ../../tsmc13_neg.v +define+p2+FSDB+SDF +access+r 
+s133(22Oct2020:19:48:40):  ncverilog testfixture.v ../syn/NFC_syn.v -v ../../tsmc13_neg.v +define+p2+FSDB+SDF +access+r 
+s134(22Oct2020:19:55:34):  irun testfixture.v ../src/NFC.v +define+p2+FSDB +access+r 
+s135(22Oct2020:19:55:59):  irun testfixture.v ../src/NFC.v +define+p2+FSDB +access+r 

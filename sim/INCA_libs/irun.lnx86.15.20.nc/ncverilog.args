@@ -6,6 +6,5 @@ testfixture.v
 ../syn/NFC_syn.v
 -v
 ../../tsmc13_neg.v
-+define+p2+FSDB
-+define+SDF
++define+p2+FSDB+SDF
 +access+r

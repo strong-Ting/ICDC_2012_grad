@@ -2,7 +2,7 @@ Magic 271485
 Revision Verdi_Q-2020.03
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 1536 23 1344 777 171 65
+viewPort 71 75 1344 777 171 65
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
@@ -16,8 +16,8 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 0.000000 2577.311175
-cursor 1500.000000
+zoom 0.000000 3604.952446
+cursor 1700.000000
 marker 0.000000
 
 ; user define markers
@@ -42,17 +42,17 @@ COMPLEX_EVENT_END
 
 ; toolbar current search type
 ; curSTATUS search_type
-curSTATUS ByChange
+curSTATUS ByValue
 
 
 aliasmapname signal.alias
-nalias ADDRESS_A_1		4'd4		NULL
 nalias IDLE_A		4'd1		NULL
+nalias ADDRESS_A_1		4'd4		NULL
 nalias ADDRESS_A_2		4'd5		NULL
-nalias DONE_A		4'd8		NULL
 nalias CMD_A		4'd2		NULL
-nalias WAIT_A		4'd6		NULL
+nalias DONE_A		4'd8		NULL
 nalias ADDRESS_A_0		4'd3		NULL
+nalias WAIT_A		4'd6		NULL
 nalias REVC_A		4'd7		NULL
 
 addGroup "G1"
@@ -73,7 +73,7 @@ aliasname signal.alias
 addSignal -h 15 -MAGN -HEX -holdScope cs_A[3:0]
 aliasname signal.alias
 addSignal -h 15 -MAGN -HEX -holdScope ns_A[3:0]
-addSignal -h 15 -UNSIGNED -UDEC -holdScope counter_MEM_A[17:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope counter_MEM_A[17:0]
 addSignal -h 15 -holdScope F_CLE_B
 addSignal -h 15 -holdScope F_WEN_B
 addSignal -h 15 -holdScope F_ALE_B

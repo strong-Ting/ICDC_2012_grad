@@ -11,10 +11,12 @@ link
 source -echo -verbose NFC.sdc
 
 #Synthesis all design
-#compile -map_effort medium -area_effort medium
-#compile -map_effort medium -area_effort medium -inc
-compile_ultra -retime
-compile_ultra -inc
+compile -map_effort high
+compile -map_effort high -inc
+#compile -map_effort high -area_effort high
+#compile -map_effort high -area_effort high -inc
+#compile_ultra 
+#compile_ultra -inc
 
 write -format ddc     -hierarchy -output "NFC_syn.ddc"
 write_sdf NFC_syn.sdf

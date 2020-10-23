@@ -100,22 +100,31 @@ wire F_CLE_A = (cs_A == CMD_A) ? 1'd1 : 1'd0;
 wire F_CLE_B = (cs_A == CMD_A || cs_A == WRITE_B ) ? 1'd1 : 1'd0;
 
 //F_REN
-wire F_REN_A = (cs_A == REVC_A) ? clk : 1'd1;	
+//wire F_REN_A = (cs_A == REVC_A) ? clk : 1'd1;	
+reg F_REN_A;
+always@(posedge clk or posedge rst)
+begin
+	if(rst) F_REN_A <= 1'd1;
+	else if(cs_A == REVC_A) F_REN_A <= ~ F_REN_A;
+end
+
 wire F_REN_B = 1'd1;
 
 //F_WEN
-wire F_WEN_A = (cs_A == CMD_A || cs_A == ADDRESS_A_0 || cs_A == ADDRESS_A_1 || cs_A == ADDRESS_A_2) ? (~clk) : 1'd1;
+wire F_WEN_A = ( (cs_A == CMD_A || cs_A == ADDRESS_A_0) || (cs_A == ADDRESS_A_1 || cs_A == ADDRESS_A_2) ) ? (~clk) : 1'd1;
 reg F_WEN_B;
+
+
 always@(*)
 begin
-	if( F_CLE_B == 1'd1 || cs_A == ADDRESS_A_0 || cs_A == ADDRESS_A_1 || cs_A == ADDRESS_A_2) F_WEN_B = (~clk);
-	else if(counter_MEM_A[8:0] != 9'd511 ) F_WEN_B = clk;
-	else F_WEN_B = 1'd0;	
+	if( (F_CLE_B == 1'd1 || cs_A == ADDRESS_A_0) || (cs_A == ADDRESS_A_1 || cs_A == ADDRESS_A_2) )  F_WEN_B = (~clk);
+	else if(F_REN_A == 1'd0) F_WEN_B  = (~clk);
+	else  F_WEN_B = 1'd0;
 end
 
 //F_ALE 
-wire F_ALE_A = (cs_A == ADDRESS_A_0 || cs_A == ADDRESS_A_1 || cs_A == ADDRESS_A_2) ? 1'd1 : 1'd0; 
-wire F_ALE_B = F_ALE_A;
+wire F_ALE_A = ( (cs_A == ADDRESS_A_0 || cs_A == ADDRESS_A_1) || cs_A == ADDRESS_A_2) ? 1'd1 : 1'd0; 
+wire F_ALE_B = ( (cs_A == ADDRESS_A_0 || cs_A == ADDRESS_A_1) || cs_A == ADDRESS_A_2) ? 1'd1 : 1'd0; 
 
 //OUT_EN
 assign OUT_EN_A = (cs_A == CMD_A || cs_A == ADDRESS_A_0 || cs_A == ADDRESS_A_1 || cs_A == ADDRESS_A_2)? 1'd1 : 1'd0; 
@@ -144,11 +153,25 @@ begin
 	else F_OUT_B = F_IN_A;
 end
 
+reg flag_c;
 //counter_MEM_A
 always@(posedge clk or posedge rst)
 begin
-	if(rst) counter_MEM_A <= 18'd262143;
-	else if(cs_A == REVC_A && ns_A == REVC_A) counter_MEM_A <= counter_MEM_A + 18'd1;
+	if(rst) 
+	begin
+		counter_MEM_A <= 18'd262143;
+		flag_c <= 1'd0;
+	end 	
+	else if(cs_A == REVC_A && ns_A == REVC_A) 
+	begin
+		if(flag_c == 1'd1) flag_c <= 1'd0;
+		else
+		begin
+			counter_MEM_A <= counter_MEM_A + 18'd1;	
+			flag_c <= 1'd1;
+		end
+	end		
+
 end
 
 //done
