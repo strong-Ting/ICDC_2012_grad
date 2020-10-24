@@ -1,5 +1,5 @@
 ncverilog: 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
-TOOL:	ncverilog	15.20-s039: Started on Oct 23, 2020 at 21:13:18 CST
+TOOL:	ncverilog	15.20-s039: Started on Oct 24, 2020 at 12:18:30 CST
 ncverilog
 	testfixture.v
 	../syn/NFC_syn.v
@@ -8,24 +8,36 @@ ncverilog
 	+define+p2+FSDB+SDF
 	+access+r
 Recompiling... reason: file '../syn/NFC_syn.sdf' is newer than expected.
-	expected: Fri Oct 23 21:10:33 2020
-	actual:   Fri Oct 23 21:13:10 2020
+	expected: Sat Oct 24 12:13:02 2020
+	actual:   Sat Oct 24 12:18:29 2020
 file: ../syn/NFC_syn.v
-	module worklib.NFC_DW01_inc_0:v
+	module worklib.NFC_DW01_inc_0_DW01_inc_1:v
+		errors: 0, warnings: 0
+	module worklib.NFC_DW01_inc_1_DW01_inc_2:v
 		errors: 0, warnings: 0
 	module worklib.NFC:v
+		errors: 0, warnings: 0
+file: ../../tsmc13_neg.v
+	module tsmc13_neg.NAND3BX4:v
+		errors: 0, warnings: 0
+	module tsmc13_neg.DFFSHQX1:v
 		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 		Caching library 'tsmc13_neg' ....... Done
 	Elaborating the design hierarchy:
-  DFFSX1 flag_reg ( .D(n324), .CK(clk), .SN(n270), .QN(n74) );
-                |
-ncelab: *W,CUVWSP (../syn/NFC_syn.v,266|16): 1 output port was not connected:
-ncelab: (/home/lin/github/tsmc13_neg.v,18583): Q
+  DFFRX1 \ADDR_STATE_CNT_reg[1]  ( .D(n147), .CK(clk), .RN(n249), .QN(n108) );
+                               |
+ncelab: *W,CUVWSP (../syn/NFC_syn.v,270|31): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): Q
 
-  DFFRX1 flag_c_reg ( .D(n344), .CK(clk), .RN(n270), .QN(n122) );
-                  |
-ncelab: *W,CUVWSP (../syn/NFC_syn.v,267|18): 1 output port was not connected:
+  DFFRX1 \F_OUT_A_reg[4]  ( .D(n123), .CK(clk), .RN(n249), .QN(n113) );
+                        |
+ncelab: *W,CUVWSP (../syn/NFC_syn.v,271|24): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): Q
+
+  DFFRX1 \F_OUT_A_reg[7]  ( .D(n120), .CK(clk), .RN(n249), .QN(n188) );
+                        |
+ncelab: *W,CUVWSP (../syn/NFC_syn.v,272|24): 1 output port was not connected:
 ncelab: (/home/lin/github/tsmc13_neg.v,18307): Q
 
 	Reading SDF file from location "../syn/NFC_syn.sdf"
@@ -40,114 +52,190 @@ ncelab: (/home/lin/github/tsmc13_neg.v,18307): Q
 		MTM control:           
 		Scale factors:         
 		Scale type:            
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.top.r370.U1 of module XOR2X1 <../syn/NFC_syn.sdf, line 1817>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.top.r370.U1 of module XOR2X1 <../syn/NFC_syn.sdf, line 1818>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.top.r370.U1 of module XOR2X1 <../syn/NFC_syn.sdf, line 1821>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.top.r370.U1 of module XOR2X1 <../syn/NFC_syn.sdf, line 1822>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.r370.U1_1_1 of module ADDHXL <../syn/NFC_syn.sdf, line 1835>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.r370.U1_1_1 of module ADDHXL <../syn/NFC_syn.sdf, line 1836>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.r370.U1_1_1 of module ADDHXL <../syn/NFC_syn.sdf, line 1839>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.r370.U1_1_1 of module ADDHXL <../syn/NFC_syn.sdf, line 1840>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.r370.U1_1_2 of module ADDHXL <../syn/NFC_syn.sdf, line 1853>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.r370.U1_1_2 of module ADDHXL <../syn/NFC_syn.sdf, line 1854>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.r370.U1_1_2 of module ADDHXL <../syn/NFC_syn.sdf, line 1857>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.r370.U1_1_2 of module ADDHXL <../syn/NFC_syn.sdf, line 1858>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.r370.U1_1_3 of module ADDHXL <../syn/NFC_syn.sdf, line 1871>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.r370.U1_1_3 of module ADDHXL <../syn/NFC_syn.sdf, line 1872>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.r370.U1_1_3 of module ADDHXL <../syn/NFC_syn.sdf, line 1875>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.r370.U1_1_3 of module ADDHXL <../syn/NFC_syn.sdf, line 1876>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.r370.U1_1_4 of module ADDHXL <../syn/NFC_syn.sdf, line 1889>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.r370.U1_1_4 of module ADDHXL <../syn/NFC_syn.sdf, line 1890>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.r370.U1_1_4 of module ADDHXL <../syn/NFC_syn.sdf, line 1893>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.r370.U1_1_4 of module ADDHXL <../syn/NFC_syn.sdf, line 1894>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.r370.U1_1_5 of module ADDHXL <../syn/NFC_syn.sdf, line 1907>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.r370.U1_1_5 of module ADDHXL <../syn/NFC_syn.sdf, line 1908>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.r370.U1_1_5 of module ADDHXL <../syn/NFC_syn.sdf, line 1911>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.r370.U1_1_5 of module ADDHXL <../syn/NFC_syn.sdf, line 1912>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.r370.U1_1_6 of module ADDHXL <../syn/NFC_syn.sdf, line 1925>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.r370.U1_1_6 of module ADDHXL <../syn/NFC_syn.sdf, line 1926>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.r370.U1_1_6 of module ADDHXL <../syn/NFC_syn.sdf, line 1929>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.r370.U1_1_6 of module ADDHXL <../syn/NFC_syn.sdf, line 1930>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.r370.U1_1_7 of module ADDHXL <../syn/NFC_syn.sdf, line 1943>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.r370.U1_1_7 of module ADDHXL <../syn/NFC_syn.sdf, line 1944>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.r370.U1_1_7 of module ADDHXL <../syn/NFC_syn.sdf, line 1947>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.r370.U1_1_7 of module ADDHXL <../syn/NFC_syn.sdf, line 1948>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.r370.U1_1_8 of module ADDHXL <../syn/NFC_syn.sdf, line 1961>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.r370.U1_1_8 of module ADDHXL <../syn/NFC_syn.sdf, line 1962>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.r370.U1_1_8 of module ADDHXL <../syn/NFC_syn.sdf, line 1965>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.r370.U1_1_8 of module ADDHXL <../syn/NFC_syn.sdf, line 1966>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.r370.U1_1_9 of module ADDHXL <../syn/NFC_syn.sdf, line 1979>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.r370.U1_1_9 of module ADDHXL <../syn/NFC_syn.sdf, line 1980>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.r370.U1_1_9 of module ADDHXL <../syn/NFC_syn.sdf, line 1983>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.r370.U1_1_9 of module ADDHXL <../syn/NFC_syn.sdf, line 1984>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.r370.U1_1_10 of module ADDHXL <../syn/NFC_syn.sdf, line 1997>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.r370.U1_1_10 of module ADDHXL <../syn/NFC_syn.sdf, line 1998>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.r370.U1_1_10 of module ADDHXL <../syn/NFC_syn.sdf, line 2001>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.r370.U1_1_10 of module ADDHXL <../syn/NFC_syn.sdf, line 2002>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.r370.U1_1_11 of module ADDHXL <../syn/NFC_syn.sdf, line 2015>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.r370.U1_1_11 of module ADDHXL <../syn/NFC_syn.sdf, line 2016>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.r370.U1_1_11 of module ADDHXL <../syn/NFC_syn.sdf, line 2019>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.r370.U1_1_11 of module ADDHXL <../syn/NFC_syn.sdf, line 2020>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.r370.U1_1_12 of module ADDHXL <../syn/NFC_syn.sdf, line 2033>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.r370.U1_1_12 of module ADDHXL <../syn/NFC_syn.sdf, line 2034>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.r370.U1_1_12 of module ADDHXL <../syn/NFC_syn.sdf, line 2037>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.r370.U1_1_12 of module ADDHXL <../syn/NFC_syn.sdf, line 2038>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.r370.U1_1_13 of module ADDHXL <../syn/NFC_syn.sdf, line 2051>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.r370.U1_1_13 of module ADDHXL <../syn/NFC_syn.sdf, line 2052>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.r370.U1_1_13 of module ADDHXL <../syn/NFC_syn.sdf, line 2055>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.r370.U1_1_13 of module ADDHXL <../syn/NFC_syn.sdf, line 2056>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.r370.U1_1_14 of module ADDHXL <../syn/NFC_syn.sdf, line 2069>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.r370.U1_1_14 of module ADDHXL <../syn/NFC_syn.sdf, line 2070>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.r370.U1_1_14 of module ADDHXL <../syn/NFC_syn.sdf, line 2073>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.r370.U1_1_14 of module ADDHXL <../syn/NFC_syn.sdf, line 2074>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.r370.U1_1_15 of module ADDHXL <../syn/NFC_syn.sdf, line 2087>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.r370.U1_1_15 of module ADDHXL <../syn/NFC_syn.sdf, line 2088>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.r370.U1_1_15 of module ADDHXL <../syn/NFC_syn.sdf, line 2091>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.r370.U1_1_15 of module ADDHXL <../syn/NFC_syn.sdf, line 2092>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.r370.U1_1_16 of module ADDHXL <../syn/NFC_syn.sdf, line 2105>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.r370.U1_1_16 of module ADDHXL <../syn/NFC_syn.sdf, line 2106>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.r370.U1_1_16 of module ADDHXL <../syn/NFC_syn.sdf, line 2109>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.r370.U1_1_16 of module ADDHXL <../syn/NFC_syn.sdf, line 2110>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.top.U336 of module XNOR2X1 <../syn/NFC_syn.sdf, line 2348>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.top.U336 of module XNOR2X1 <../syn/NFC_syn.sdf, line 2349>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.top.U336 of module XNOR2X1 <../syn/NFC_syn.sdf, line 2352>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.top.U336 of module XNOR2X1 <../syn/NFC_syn.sdf, line 2353>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.top.U136 of module XNOR2XL <../syn/NFC_syn.sdf, line 3788>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.top.U136 of module XNOR2XL <../syn/NFC_syn.sdf, line 3789>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.top.U136 of module XNOR2XL <../syn/NFC_syn.sdf, line 3792>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.top.U136 of module XNOR2XL <../syn/NFC_syn.sdf, line 3793>.
-	Annotation completed with 0 Errors and 76 Warnings
-	SDF statistics: No. of Pathdelays = 788  Annotated = 90.61% -- No. of Tchecks = 304  Annotated = 67.11% 
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.top.add_144.U2 of module XOR2X1 <../syn/NFC_syn.sdf, line 1765>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.top.add_144.U2 of module XOR2X1 <../syn/NFC_syn.sdf, line 1766>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.top.add_144.U2 of module XOR2X1 <../syn/NFC_syn.sdf, line 1769>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.top.add_144.U2 of module XOR2X1 <../syn/NFC_syn.sdf, line 1770>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_144.U1_1_1 of module ADDHXL <../syn/NFC_syn.sdf, line 1792>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_144.U1_1_1 of module ADDHXL <../syn/NFC_syn.sdf, line 1793>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_144.U1_1_1 of module ADDHXL <../syn/NFC_syn.sdf, line 1796>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_144.U1_1_1 of module ADDHXL <../syn/NFC_syn.sdf, line 1797>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_144.U1_1_2 of module ADDHXL <../syn/NFC_syn.sdf, line 1810>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_144.U1_1_2 of module ADDHXL <../syn/NFC_syn.sdf, line 1811>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_144.U1_1_2 of module ADDHXL <../syn/NFC_syn.sdf, line 1814>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_144.U1_1_2 of module ADDHXL <../syn/NFC_syn.sdf, line 1815>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_144.U1_1_3 of module ADDHXL <../syn/NFC_syn.sdf, line 1828>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_144.U1_1_3 of module ADDHXL <../syn/NFC_syn.sdf, line 1829>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_144.U1_1_3 of module ADDHXL <../syn/NFC_syn.sdf, line 1832>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_144.U1_1_3 of module ADDHXL <../syn/NFC_syn.sdf, line 1833>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_144.U1_1_4 of module ADDHXL <../syn/NFC_syn.sdf, line 1846>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_144.U1_1_4 of module ADDHXL <../syn/NFC_syn.sdf, line 1847>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_144.U1_1_4 of module ADDHXL <../syn/NFC_syn.sdf, line 1850>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_144.U1_1_4 of module ADDHXL <../syn/NFC_syn.sdf, line 1851>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_144.U1_1_5 of module ADDHXL <../syn/NFC_syn.sdf, line 1864>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_144.U1_1_5 of module ADDHXL <../syn/NFC_syn.sdf, line 1865>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_144.U1_1_5 of module ADDHXL <../syn/NFC_syn.sdf, line 1868>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_144.U1_1_5 of module ADDHXL <../syn/NFC_syn.sdf, line 1869>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_144.U1_1_6 of module ADDHXL <../syn/NFC_syn.sdf, line 1882>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_144.U1_1_6 of module ADDHXL <../syn/NFC_syn.sdf, line 1883>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_144.U1_1_6 of module ADDHXL <../syn/NFC_syn.sdf, line 1886>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_144.U1_1_6 of module ADDHXL <../syn/NFC_syn.sdf, line 1887>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_144.U1_1_7 of module ADDHXL <../syn/NFC_syn.sdf, line 1900>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_144.U1_1_7 of module ADDHXL <../syn/NFC_syn.sdf, line 1901>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_144.U1_1_7 of module ADDHXL <../syn/NFC_syn.sdf, line 1904>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_144.U1_1_7 of module ADDHXL <../syn/NFC_syn.sdf, line 1905>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_144.U1_1_8 of module ADDHXL <../syn/NFC_syn.sdf, line 1918>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_144.U1_1_8 of module ADDHXL <../syn/NFC_syn.sdf, line 1919>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_144.U1_1_8 of module ADDHXL <../syn/NFC_syn.sdf, line 1922>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_144.U1_1_8 of module ADDHXL <../syn/NFC_syn.sdf, line 1923>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_144.U1_1_9 of module ADDHXL <../syn/NFC_syn.sdf, line 1936>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_144.U1_1_9 of module ADDHXL <../syn/NFC_syn.sdf, line 1937>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_144.U1_1_9 of module ADDHXL <../syn/NFC_syn.sdf, line 1940>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_144.U1_1_9 of module ADDHXL <../syn/NFC_syn.sdf, line 1941>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_144.U1_1_10 of module ADDHXL <../syn/NFC_syn.sdf, line 1954>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_144.U1_1_10 of module ADDHXL <../syn/NFC_syn.sdf, line 1955>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_144.U1_1_10 of module ADDHXL <../syn/NFC_syn.sdf, line 1958>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_144.U1_1_10 of module ADDHXL <../syn/NFC_syn.sdf, line 1959>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_144.U1_1_11 of module ADDHXL <../syn/NFC_syn.sdf, line 1972>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_144.U1_1_11 of module ADDHXL <../syn/NFC_syn.sdf, line 1973>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_144.U1_1_11 of module ADDHXL <../syn/NFC_syn.sdf, line 1976>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_144.U1_1_11 of module ADDHXL <../syn/NFC_syn.sdf, line 1977>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_144.U1_1_12 of module ADDHXL <../syn/NFC_syn.sdf, line 1990>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_144.U1_1_12 of module ADDHXL <../syn/NFC_syn.sdf, line 1991>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_144.U1_1_12 of module ADDHXL <../syn/NFC_syn.sdf, line 1994>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_144.U1_1_12 of module ADDHXL <../syn/NFC_syn.sdf, line 1995>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_144.U1_1_13 of module ADDHXL <../syn/NFC_syn.sdf, line 2008>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_144.U1_1_13 of module ADDHXL <../syn/NFC_syn.sdf, line 2009>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_144.U1_1_13 of module ADDHXL <../syn/NFC_syn.sdf, line 2012>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_144.U1_1_13 of module ADDHXL <../syn/NFC_syn.sdf, line 2013>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_144.U1_1_14 of module ADDHXL <../syn/NFC_syn.sdf, line 2026>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_144.U1_1_14 of module ADDHXL <../syn/NFC_syn.sdf, line 2027>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_144.U1_1_14 of module ADDHXL <../syn/NFC_syn.sdf, line 2030>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_144.U1_1_14 of module ADDHXL <../syn/NFC_syn.sdf, line 2031>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_144.U1_1_15 of module ADDHXL <../syn/NFC_syn.sdf, line 2044>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_144.U1_1_15 of module ADDHXL <../syn/NFC_syn.sdf, line 2045>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_144.U1_1_15 of module ADDHXL <../syn/NFC_syn.sdf, line 2048>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_144.U1_1_15 of module ADDHXL <../syn/NFC_syn.sdf, line 2049>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_144.U1_1_16 of module ADDHXL <../syn/NFC_syn.sdf, line 2062>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_144.U1_1_16 of module ADDHXL <../syn/NFC_syn.sdf, line 2063>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_144.U1_1_16 of module ADDHXL <../syn/NFC_syn.sdf, line 2066>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_144.U1_1_16 of module ADDHXL <../syn/NFC_syn.sdf, line 2067>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.top.add_168_S2.U2 of module XOR2X1 <../syn/NFC_syn.sdf, line 2078>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.top.add_168_S2.U2 of module XOR2X1 <../syn/NFC_syn.sdf, line 2079>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.top.add_168_S2.U2 of module XOR2X1 <../syn/NFC_syn.sdf, line 2082>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.top.add_168_S2.U2 of module XOR2X1 <../syn/NFC_syn.sdf, line 2083>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_1 of module ADDHXL <../syn/NFC_syn.sdf, line 2105>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_1 of module ADDHXL <../syn/NFC_syn.sdf, line 2106>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_1 of module ADDHXL <../syn/NFC_syn.sdf, line 2109>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_1 of module ADDHXL <../syn/NFC_syn.sdf, line 2110>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_2 of module ADDHXL <../syn/NFC_syn.sdf, line 2123>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_2 of module ADDHXL <../syn/NFC_syn.sdf, line 2124>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_2 of module ADDHXL <../syn/NFC_syn.sdf, line 2127>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_2 of module ADDHXL <../syn/NFC_syn.sdf, line 2128>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_3 of module ADDHXL <../syn/NFC_syn.sdf, line 2141>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_3 of module ADDHXL <../syn/NFC_syn.sdf, line 2142>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_3 of module ADDHXL <../syn/NFC_syn.sdf, line 2145>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_3 of module ADDHXL <../syn/NFC_syn.sdf, line 2146>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_4 of module ADDHXL <../syn/NFC_syn.sdf, line 2159>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_4 of module ADDHXL <../syn/NFC_syn.sdf, line 2160>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_4 of module ADDHXL <../syn/NFC_syn.sdf, line 2163>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_4 of module ADDHXL <../syn/NFC_syn.sdf, line 2164>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_5 of module ADDHXL <../syn/NFC_syn.sdf, line 2177>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_5 of module ADDHXL <../syn/NFC_syn.sdf, line 2178>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_5 of module ADDHXL <../syn/NFC_syn.sdf, line 2181>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_5 of module ADDHXL <../syn/NFC_syn.sdf, line 2182>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_6 of module ADDHXL <../syn/NFC_syn.sdf, line 2195>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_6 of module ADDHXL <../syn/NFC_syn.sdf, line 2196>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_6 of module ADDHXL <../syn/NFC_syn.sdf, line 2199>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_6 of module ADDHXL <../syn/NFC_syn.sdf, line 2200>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_7 of module ADDHXL <../syn/NFC_syn.sdf, line 2213>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_7 of module ADDHXL <../syn/NFC_syn.sdf, line 2214>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_7 of module ADDHXL <../syn/NFC_syn.sdf, line 2217>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_7 of module ADDHXL <../syn/NFC_syn.sdf, line 2218>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_8 of module ADDHXL <../syn/NFC_syn.sdf, line 2231>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_8 of module ADDHXL <../syn/NFC_syn.sdf, line 2232>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_8 of module ADDHXL <../syn/NFC_syn.sdf, line 2235>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_8 of module ADDHXL <../syn/NFC_syn.sdf, line 2236>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_9 of module ADDHXL <../syn/NFC_syn.sdf, line 2249>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_9 of module ADDHXL <../syn/NFC_syn.sdf, line 2250>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_9 of module ADDHXL <../syn/NFC_syn.sdf, line 2253>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_9 of module ADDHXL <../syn/NFC_syn.sdf, line 2254>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_10 of module ADDHXL <../syn/NFC_syn.sdf, line 2267>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_10 of module ADDHXL <../syn/NFC_syn.sdf, line 2268>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_10 of module ADDHXL <../syn/NFC_syn.sdf, line 2271>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_10 of module ADDHXL <../syn/NFC_syn.sdf, line 2272>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_11 of module ADDHXL <../syn/NFC_syn.sdf, line 2285>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_11 of module ADDHXL <../syn/NFC_syn.sdf, line 2286>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_11 of module ADDHXL <../syn/NFC_syn.sdf, line 2289>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_11 of module ADDHXL <../syn/NFC_syn.sdf, line 2290>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_12 of module ADDHXL <../syn/NFC_syn.sdf, line 2303>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_12 of module ADDHXL <../syn/NFC_syn.sdf, line 2304>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_12 of module ADDHXL <../syn/NFC_syn.sdf, line 2307>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_12 of module ADDHXL <../syn/NFC_syn.sdf, line 2308>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_13 of module ADDHXL <../syn/NFC_syn.sdf, line 2321>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_13 of module ADDHXL <../syn/NFC_syn.sdf, line 2322>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_13 of module ADDHXL <../syn/NFC_syn.sdf, line 2325>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_13 of module ADDHXL <../syn/NFC_syn.sdf, line 2326>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_14 of module ADDHXL <../syn/NFC_syn.sdf, line 2339>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_14 of module ADDHXL <../syn/NFC_syn.sdf, line 2340>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_14 of module ADDHXL <../syn/NFC_syn.sdf, line 2343>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_14 of module ADDHXL <../syn/NFC_syn.sdf, line 2344>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_15 of module ADDHXL <../syn/NFC_syn.sdf, line 2357>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_15 of module ADDHXL <../syn/NFC_syn.sdf, line 2358>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_15 of module ADDHXL <../syn/NFC_syn.sdf, line 2361>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_15 of module ADDHXL <../syn/NFC_syn.sdf, line 2362>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_16 of module ADDHXL <../syn/NFC_syn.sdf, line 2375>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_16 of module ADDHXL <../syn/NFC_syn.sdf, line 2376>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_16 of module ADDHXL <../syn/NFC_syn.sdf, line 2379>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_16 of module ADDHXL <../syn/NFC_syn.sdf, line 2380>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) S) of instance test.top.add_168_S2.U1_1_17 of module ADDHXL <../syn/NFC_syn.sdf, line 2393>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) S) of instance test.top.add_168_S2.U1_1_17 of module ADDHXL <../syn/NFC_syn.sdf, line 2394>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) S) of instance test.top.add_168_S2.U1_1_17 of module ADDHXL <../syn/NFC_syn.sdf, line 2397>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) S) of instance test.top.add_168_S2.U1_1_17 of module ADDHXL <../syn/NFC_syn.sdf, line 2398>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.top.U242 of module XOR2X1 <../syn/NFC_syn.sdf, line 3253>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.top.U242 of module XOR2X1 <../syn/NFC_syn.sdf, line 3254>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.top.U242 of module XOR2X1 <../syn/NFC_syn.sdf, line 3257>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.top.U242 of module XOR2X1 <../syn/NFC_syn.sdf, line 3258>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.top.U203 of module XNOR2XL <../syn/NFC_syn.sdf, line 3570>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.top.U203 of module XNOR2XL <../syn/NFC_syn.sdf, line 3571>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.top.U203 of module XNOR2XL <../syn/NFC_syn.sdf, line 3574>.
+ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.top.U203 of module XNOR2XL <../syn/NFC_syn.sdf, line 3575>.
+	Annotation completed with 0 Errors and 148 Warnings
+	SDF statistics: No. of Pathdelays = 864  Annotated = 91.44% -- No. of Tchecks = 310  Annotated = 67.74% 
 				        Total 	   Annotated	  Percentage
-		 Path Delays	         788	         714	       90.61
+		 Path Delays	         864	         790	       91.44
 		      $setup	          28	           0	        0.00
 		       $hold	          54	           0	        0.00
 		     $period	           8	           0	        0.00
-		      $width	         112	         102	       91.07
-		  $setuphold	         102	         102	      100.00
+		      $width	         115	         105	       91.30
+		  $setuphold	         105	         105	      100.00
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.NFC:v <0x0317615d>
+		tsmc13_neg.DFFSHQX1:v <0x738b7ae4>
+			streams:   0, words:     0
+		tsmc13_neg.XOR2X1:v <0x18c6196b>
+			streams:   0, words:     0
+		worklib.NFC:v <0x116f1ee9>
 			streams:   1, words:   115
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                   Instances  Unique
-		Modules:                 288      62
-		UDPs:                     34       1
-		Primitives:              580      10
-		Timing outputs:          341      37
-		Registers:               244     214
-		Scalar wires:            446       -
+		Modules:                 282      60
+		UDPs:                     35       1
+		Primitives:              599      10
+		Timing outputs:          351      40
+		Registers:               245     216
+		Scalar wires:            456       -
 		Vectored wires:            6       -
 		Named events:              4       4
 		Always blocks:            96      96
 		Initial blocks:           75      75
 		Cont. assignments:         3      19
 		Pseudo assignments:        2       2
-		Timing checks:           406      73
-		Interconnect:            602       -
-		Delayed tcheck signals:  102      36
+		Timing checks:           415      76
+		Interconnect:            609       -
+		Delayed tcheck signals:  105      37
 		Simulation timescale:    1ps
 	Writing initial simulation snapshot: worklib.test:v
 Loading snapshot worklib.test:v .................... Done
@@ -167,4 +255,4 @@ All data have been generated successfully!
 Simulation complete via $finish(1) at time 10854051471 PS + 0
 ./testfixture.v:134 		    $finish;
 ncsim> exit
-TOOL:	ncverilog	15.20-s039: Exiting on Oct 23, 2020 at 21:13:42 CST  (total: 00:00:24)
+TOOL:	ncverilog	15.20-s039: Exiting on Oct 24, 2020 at 12:18:51 CST  (total: 00:00:21)

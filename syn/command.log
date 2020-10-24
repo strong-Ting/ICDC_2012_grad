@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version Q-2019.12 for linux64 -- Nov 26, 2019
-#@ # Date:   Fri Oct 23 21:13:00 2020
+#@ # Date:   Sat Oct 24 12:18:19 2020
 #@ # Run by: lin@DESKTOP-OFJ877F
 #@ 
 
@@ -6751,6 +6751,15 @@ source -echo -verbose /home/lin/github/CIC_2012_grad/syn/DC_syn.tcl
 #@ set_wire_load_model -name tsmc13_wl10 -library slow                        
 #@ # -- End source NFC.sdc
 
+#@ 
+#@ 
+#@ 
+#@ #set high_fanout_net_threshold 0
+#@ 
+#@ #uniquify
+#@ #set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
+#@ 
+#@ #set_structure -timing true
 #@ 
 #@ #Synthesis all design
 #@ compile -map_effort high
