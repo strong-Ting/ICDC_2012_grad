@@ -35,3 +35,4 @@ BSSLib.lib++/
 sram*
 rom*.v
 flash*
+alib-52/
